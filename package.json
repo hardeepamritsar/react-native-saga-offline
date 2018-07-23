@@ -1,0 +1,24 @@
+{
+  "name": "sagaoffline",
+  "version": "1.0.0",
+  "description": "Adds saga actions to offline queue if notwork is not reachable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardeepamritsar/sagaoffline.git"
+  },
+  "author": "Hardeep Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hardeepamritsar/sagaoffline/issues"
+  },
+  "homepage": "https://github.com/hardeepamritsar/sagaoffline#readme",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "react-native-reachability": "^1.0.4",
+    "redux-mock-store": "^1.5.3"
+  }
+}
