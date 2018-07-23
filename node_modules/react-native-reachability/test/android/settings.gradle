@@ -1,6 +1,0 @@
-rootProject.name = 'TestApp'
-
-include ':react-native-reachability'
-project(':react-native-reachability').projectDir = new File("../../android")
-
-include ':app'
