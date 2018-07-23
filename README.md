@@ -41,3 +41,5 @@ export const sagaAction = () => ({
   },
 });
 ```
+
+Action from offline queue with have meta.actionFromOfflineQueue as true
