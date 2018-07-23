@@ -1,10 +1,10 @@
 {
   "name": "react-native-saga-offline",
   "version": "1.0.0",
-  "description": "Adds saga actions to offline queue if notwork is not reachable",
+  "description": "Adds saga actions to offline queue if network is not reachable, dispatch offline actions once network becomes reachable.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test"
   },
   "repository": {
     "type": "git",
