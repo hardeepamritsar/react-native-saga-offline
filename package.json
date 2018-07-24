@@ -1,11 +1,23 @@
 {
   "name": "react-native-saga-offline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds saga actions to offline queue if network is not reachable, dispatch offline actions once network becomes reachable.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "jest"
   },
+  "keywords": [
+    "offline",
+    "saga",
+    "middleware",
+    "saga offline",
+    "react native saga",
+    "react native saga offline",
+    "network",
+    "reachability",
+    "offline saga",
+    "offline queue"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hardeepamritsar/react-native-saga-offline.git"
@@ -18,7 +30,17 @@
   "homepage": "https://github.com/hardeepamritsar/react-native-saga-offline#readme",
   "dependencies": {
     "lodash": "^4.17.10",
-    "react-native-reachability": "^1.0.4",
+    "react-native-reachability": "^1.0.4"
+  },
+  "jest": {},
+  "devDependencies": {
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^23.4.1",
+    "jest-cli": "^23.4.1",
+    "react": "^16.4.1",
+    "react-native": "^0.56.0",
+    "react-test-renderer": "^16.4.1",
+    "redux": "^4.0.0",
     "redux-mock-store": "^1.5.3"
   }
 }
