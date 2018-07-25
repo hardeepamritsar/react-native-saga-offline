@@ -1,3 +1,6 @@
+
+<p align="center"><a href="https://travis-ci.org/hardeepamritsar/react-native-saga-offline"><img src="https://travis-ci.org/hardeepamritsar/react-native-saga-offline.svg?branch=master"/></a></p>
+
 # react-native-saga-offline
 Adds saga actions to offline queue if network is not reachable, dispatch offline actions once network becomes reachable 
 
