@@ -45,6 +45,18 @@ describe('Test updateAvailability()', () => {
     });
   });
 
+  describe('Test updateAvailability() no change', () => {
+    it('should not dispatch any action', () => {
+      Network.isReachable.mockImplementation(() => false);
+      const store = mockStore(storeObj);
+      const connectivity = new Connectivity(store);
+      connectivity.previousConnectionState = false;
+      return connectivity.handleConnectivityChange().then(() => {
+         expect(store.getActions().length).toEqual(0);
+      });
+    });
+  });
+  
   it('should dispatch action @@network-connectivity/NETWORK_CHANGE_REACHABLE action and check for connectivity changes ', () => {
     Network.isReachable.mockImplementation(() => true);
     const store = mockStore(storeObj);

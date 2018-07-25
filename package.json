@@ -4,7 +4,7 @@
   "description": "Adds saga actions to offline queue if network is not reachable, dispatch offline actions once network becomes reachable.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "keywords": [
     "offline",
