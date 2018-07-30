@@ -12,6 +12,11 @@ npm install --save react-native-saga-offline # with npm
 yarn add react-native-saga-offline # with yarn
 ```
 
+Link react-native-reachability
+```
+react-native link react-native-reachability
+```
+
 ## How it works
 
 <p align="center"><a href="https://i.imgur.com/F3jY0zM.png"><img src="https://i.imgur.com/F3jY0zM.png"/></a></p>
