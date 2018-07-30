@@ -34,6 +34,18 @@ new Connectivity(this.store);
 
 ```
 
+Add reducer
+
+```javascript
+
+import { offlineReducer } from 'react-native-saga-offline';
+
+
+const appReducer = combineReducers({
+  offline: offlineReducer,
+});
+```
+
 Action with meta.retry : true would be queued as offline action
 ```javascript
 
