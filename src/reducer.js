@@ -1,4 +1,4 @@
-import { isEqual, find, without } from 'lodash';
+import { isEqual, find, without, filter } from 'lodash';
 import actionTypes from './actionTypes';
 
 export const initialState = { isConnected: null, offlineQueue: [] };
@@ -13,8 +13,13 @@ function handleOfflineAction(state, action) {
 }
 
 function handleRemoveActionFromQueue(state, action) {
-  return { ...state, offlineQueue: without(state.offlineQueue, action) };
-}
+  return { ...state,
+     offlineQueue: filter(state.offlineQueue, function(actionFromOffline) {
+        return !isEqual(actionFromOffline,action) 
+      })
+    };
+};
+
 export default (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {

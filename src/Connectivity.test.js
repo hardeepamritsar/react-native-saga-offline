@@ -1,11 +1,11 @@
 import configureMockStore from 'redux-mock-store';
-import Network from 'react-native-reachability';
+import Network from 'react-native-internet-reachability';
 import reducer from './reducer';
 import Connectivity from './Connectivity';
 import { networkRreachable, networkUnRreachable } from './actionCreators';
 import createSagaOfflineMiddleware from './index';
 
-jest.mock('react-native-reachability', () => ({
+jest.mock('react-native-internet-reachability', () => ({
   isReachable: jest.fn(),
 }));
 

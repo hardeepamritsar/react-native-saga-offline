@@ -1,10 +1,10 @@
 import configureMockStore from 'redux-mock-store';
-import Network from 'react-native-reachability';
+import Network from 'react-native-internet-reachability';
 import reducer from './reducer';
 import { networkRreachable, removeFromOfflineActionQueue, addToOfflineActionQueue } from './actionCreators';
 import createSagaOfflineMiddleware from './index';
 
-jest.mock('react-native-reachability', () => ({
+jest.mock('react-native-internet-reachability', () => ({
   isReachable: jest.fn(),
 }));
 
@@ -33,7 +33,6 @@ describe('Test createSagaOfflineMiddleware', () => {
   it('should dispatch action @@network-connectivity/ADD_TO_OFFLINE_ACTION_QUEUE action and add offline actions ', () => {
     Network.isReachable.mockImplementation(() => false);
     const store = mockStore(storeObj);
-    Network.isReachable.mockImplementation(() => false);
     return store.dispatch(addToOfflineActionQueue(storeObj.offline.offlineQueue[0].payload.action)).then(() => {
       expect(store.getActions()[0].type).toEqual(addToOfflineActionQueue().type);
       const newSatate = reducer(store.getState().offline, store.getActions()[0]);
@@ -42,7 +41,7 @@ describe('Test createSagaOfflineMiddleware', () => {
   });
 
   it('should dispatch action @@network-connectivity/REMOVE_FROM_OFFLINE_ACTION_QUEUE action and remove offline actions ', () => {
-    Network.isReachable.mockImplementation(() => false);
+    Network.isReachable.mockImplementation(() => true);
     const store = mockStore(storeObj);
     return store.dispatch(networkRreachable()).then(() => {
       expect(store.getActions()[0].type).toEqual(removeFromOfflineActionQueue().type);

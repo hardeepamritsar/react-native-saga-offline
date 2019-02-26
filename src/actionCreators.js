@@ -14,17 +14,16 @@ export const addToOfflineActionQueue = action => ({
     action,
   },
 });
-
+export const offlineActionQueue = action => {
+  let newAction =  {
+    type: actionTypes.ADD_TO_OFFLINE_ACTION_QUEUE,
+    payload: {
+      action,
+    },
+  }
+  return newAction;
+};
 export const removeFromOfflineActionQueue = action => ({
   type: actionTypes.REMOVE_FROM_OFFLINE_ACTION_QUEUE,
-  payload: action,
+  payload: offlineActionQueue(action),
 });
-
-export const markAsFromOfflineQueue = (action) => {
-  const offlineAction = action;
-  if (!offlineAction.meta) {
-    offlineAction.meta = {};
-  }
-  offlineAction.meta.actionFromOfflineQueue = true;
-  return offlineAction;
-};

@@ -1,4 +1,4 @@
-import Network from 'react-native-reachability';
+import Network from 'react-native-internet-reachability';
 import { networkRreachable, networkUnRreachable } from './actionCreators';
 
 export default class Connectivity {
