@@ -13,11 +13,11 @@ function createSagaOfflineMiddleware() {
 function processOfflineQueue(action, getState, next) {
   const now = Date.now();
   if ( now - timestampOfOfflineQueProcessed >  60000) { // 60 seconds
+    timestampOfOfflineQueProcessed = Date.now();
     const { offlineQueue } = getState().offline;
     offlineQueue.forEach((actionFromOfflineQueue) => {
       next(actionFromOfflineQueue.payload.action);
     });
-    timestampOfOfflineQueProcessed = Date.now();
   } 
 }
 
