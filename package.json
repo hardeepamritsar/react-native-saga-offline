@@ -1,6 +1,6 @@
 {
   "name": "react-native-saga-offline",
-  "version": "1.1.1013",
+  "version": "1.1.1014",
   "description": "Adds saga actions to offline queue if network is not reachable, dispatch offline actions once network becomes reachable.",
   "main": "src/index.js",
   "scripts": {
